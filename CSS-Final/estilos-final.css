@@ -21,6 +21,7 @@ header{
     justify-content: space-between;
     align-items: center;
     background-color: #24252A;
+    
 }
 
 .logo{
@@ -51,6 +52,7 @@ li:hover{
     position: absolute;
     display: none;
     transform: translateY(20px);
+    
 }
 
 .ul-second > li{
@@ -65,8 +67,10 @@ li:hover{
 
 .ul-second > li:hover{
     background-color: #008849;
+    
 }
 
 .develop:hover > .ul-second{
     display: block;
+    
 }
