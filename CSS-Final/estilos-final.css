@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;  
-    font-family: 'Montserrat', sans-serif;    
+    font-family: 'Montserrat', sans-serif;
 }
 
 body{
@@ -73,4 +73,23 @@ li:hover{
 .develop:hover > .ul-second{
     display: block;
     
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+p{
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px;
+    
+}
+video{
+    height: 450;
+    width: 450;
+    float: left;
 }
