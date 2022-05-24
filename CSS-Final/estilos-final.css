@@ -112,9 +112,9 @@ h1{
 
 .carrusel{
     height: 100vh;
-    display: flex;
+    display:flex;
     align-items: center;
-    
+ 
 }
 
 .carrusel-items{
