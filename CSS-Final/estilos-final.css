@@ -144,3 +144,39 @@ h1{
     transform: scale(1.2);
 
 }
+
+/* .parrafo-2{
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+}
+.parrafo-2 p{
+    text-align: justify-all;
+    margin-top: 10px;
+    font-size: 16px;
+    margin: 20px;
+}
+
+#procesador{
+    height: 230px;
+    width: 230px;
+    margin: 20px;
+}
+
+#procesador{
+    float: left;
+} */
+
+p{
+    font-size: 20px;
+    line-height: 50px;
+}
+
+
+img{
+    width: 250px;
+    float: left;
+    margin-right: 20px;
+    margin-top: 15px;
+}

@@ -12,6 +12,7 @@ const start = () => {
         }
     }, 10);
 }; 
+start();
 
 const stop = () => {
     clearInterval(intervalo);
@@ -25,4 +26,3 @@ carrusel.addEventListener("mouseout",() => {
     start();
 });
 
-start();
