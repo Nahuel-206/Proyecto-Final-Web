@@ -19,7 +19,7 @@ header{
     min-width: 100%; 
     width: 100%;  
     display: flex;  
-    padding: 20px 0;
+    padding: 30px 0;
     justify-content: space-between;
     align-items: center;
     background-color: #24252A;
@@ -53,7 +53,6 @@ li:hover{
     position: absolute;
     display: none;
     transform: translateY(20px);
-    
 }
 
 .ul-second > li{
@@ -68,12 +67,10 @@ li:hover{
 
 .ul-second > li:hover{
     background-color: #008849;
-    
 }
 
 .develop:hover > .ul-second{
     display: block;
-    
 }
 
 header li a{
@@ -108,10 +105,11 @@ video{
     margin-top: 15px;
 }
 
-h1{
+.parrafo h1{
     margin-top: 30px;
     text-decoration: none;
     background: #008849;
+    text-align: center;
 }
 
 .carrusel{
@@ -119,18 +117,20 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
  }
 
-.carrusel-items{
+.carrusel-items{    
     display: flex;
     overflow-x: hidden;
     overflow-y: hidden;
     border: 2px solid black;
-    padding: 30px 0px;
+    padding: 20px 0px;
 }
 
 .carrusel-item{
-    min-width: 300px;
+    min-width: 350px;
+    max-width: 350px;
     height: 250px;
     cursor: pointer;
     outline: auto;
@@ -147,40 +147,58 @@ h1{
     transform: scale(1.2);
 }
 
-p{
+.info p{
     font-size: 20px;
     line-height: 30px;
     text-align: justify;
     margin-right: 20px;
     margin-left: 20px;
     font-weight: 550;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 
-img{
+.info img{
     width: 350px;
     float: left;
     margin-right: 20px;
     margin-top: 15px;
 }
-h3{
+
+.info h3{
     text-align: center;
     line-height: 40px;
     background-color: #008849;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.pro{
+    padding: 20px;
 }
 
 .pro img{
-    align-items: center;
-    height: 400px;
-    width: 400px;
-    margin-top: 10px;
+    margin-top: 20px;   
+    text-align: center;
+}
+
+.pro h1{
+    margin-top: 30px;
+    text-decoration: none;
+    background: #008849;
+    text-align: center;
 }
 
 .pro p{
-    text-align: justify-all;
     font-size: 18px;
-    margin: 20px;
+    margin-top: 30px;
     font-weight: 550;
-    line-height: 30px;
+    line-height: 20px;
+}
+
+.video2{
+    margin-top: 130px;
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: center;
 }
