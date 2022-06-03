@@ -4,6 +4,23 @@
         <link rel="stylesheet" href="CSS-Final/estilos-final.css" type = "text/css" >
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+        <style>
+            table, th, td{
+                border: 1px solid black;
+                margin-top: 20px;
+                border-collapse: collapse;
+                margin: 20px;
+                margin-right: 20px;
+                margin-left: 20px;
+            }
+            th,td{
+                padding: 15px;
+            }
+            th{
+                text-align: left;
+            }
+        </style>
     </head>
 <body>
     <header>
@@ -17,7 +34,7 @@
                         <li><a href="ram.html"> RAM </a></li>
                     </ul>
                 </li>
-                <li> Contacto </li>
+                <li><a href="contacto.html"> Contacto </a></li>
             </ul>  
     </header>
 
@@ -26,21 +43,81 @@
     <h1> Aca van a estar los procesadores </h1>
     <img src="Videos y Fotos/pro1.jpg" alt=""><br>
 
-<p>    
-El procesador es el “cerebro” del ordenador.         
-Es el componente encargado de la ejecución de las instrucciones de los programas. 
-Todos los ordenadores tienen al menos un procesador.    
-</p>
+    <p>
+    Un procesador está formado por una serie de componentes que trabajan de forma
+    coordinada par ejecutar las instrucciones que forman los programas. Estos componentes son los siguientes:
+    </p>
 
-<p>
-El procesador está formado por un conjunto de registros que almacenen datos, una
-unidad aritmético-lógica que realiza operaciones con ellos y una unidad de control
-que se encarga de coordinar a todos los componentes. Un reloj interno determina la
-velocidad de trabajo de estos elementos internos.
-</p>
-
-
+    <ul>
+        <li> • Unidad de interface con el bus: es quien recibe las instrucciones y los datos directamente de la memoria RAM a través del bus del sistema (o front side bus-FSB-). </li>
+       
+        <li> • Unidad de decodificación: se encarga de decodificar la instrucción para determinar a qué instrucción corresponde la secuencia de bits que acaba de leer
+            y saber de esta forma qué tiene que hacer el procesador con los datos leídos.</li>
+       
+        <li> • Unidad aritmético-lógica (ALU): en ocasiones las instrucciones requieren de la
+            realización de algún cálculo. Este es el componente básico encargado de realizar operaciones matemáticas (aritméticas y lógicas) con los datos.</li>
+            
+        <li>• Registros: almacenan temporalmente los datos de la instrucción que está ejecutando en ese momento la unidad aritmético-lógica. El tamaño de estos registros
+            se mide en bits y determina el tamaño máximo de los datos que puede manipular en una sola operación. Piensa que son unas casillas que se rellenan con unos
+            y ceros. Si tenemos más cifras que casillas, tendremos que hacer la operación
+            en 2 ó más veces porque no nos caben todos los datos.
+            En los procesadores actuales estos registros son de 32 o de 64 bits. Por esto decimos que un procesador es de 64 bits. Fíjate que, al doblar el tamaño de los
+            registros necesitaremos la mitad de accesos en el caso de que las instrucciones
+            no quepan en los registros, con lo que el ordenador podría llegar a ser el doble
+            de rápido.</li>
+        
+        <li>  • Reloj interno: todos lo componentes anteriormente descritos trabajan de forma
+            sincronizada por impulsos. El reloj es el encargado de proporcionar los pulsos para que todos los elementos se sincronicen.</li>
+        
+        <li>  • Unidad de control (UC): es la unidad que coordina el funcionamiento de todas
+            las anteriores, indicando de quién es el turno de operar en cada instante. </li>
+    </ul>
+    
 </div>
+
+    <table style="width: 60%;">
+        <tr>
+            <th> Tipo de equipo</th>
+            <th> Intel</th>
+           
+            <th> AMD </th>
+        </tr>
+        <tr>
+            <td> Gama baja</td>
+            <td> Celeron </td>
+            <td> Sempron </td>
+            
+        </tr>
+        <tr>
+            <td rowspan="2"> Escritorio</td>
+            <td> Core2Duo, i3,i5 </td>
+            <tr>
+                <td> Core2Quad, i5,i7</td>
+            </tr>
+        </tr>
+
+        
+
+        <tr>
+            <td> Portatil </td>
+            <td> Centrino, i3, i5 </td>
+            
+        </tr>
+        <tr>
+            <td> Netbook</td>
+            <td> Atom </td>
+            
+        </tr>
+        <tr>
+            <td rowspan="2"> Servidor</td>
+            <td> Xeon </td>
+            <tr>
+                <td> Itanium (RISC) </td>
+            </tr>
+           
+        </tr>
+    </table>
+
 
 </body>
 </html>
