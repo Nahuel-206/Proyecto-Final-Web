@@ -20,68 +20,70 @@
                 <li><a href="contacto.html"> Contacto </a></li>
             </ul>  
     </header>
-<h1> Aca va a estar el formulario </h1>
 
-<form onsubmit="return  enviar(event)" name="form" id="form" method="get">
-    <div>
-    <label for="nombre"> Nombre </label> <br>
-    <input type="text" name="nombre" id="nombre" >
+
+<div class="contenedor">
+<form onsubmit="return  enviar(event)" name="form" id="form" class="form">
+
+    <div class="form-header">
+    <h1 class="form-title"> C <span> ontacto</span> </h1>
+    </div>
+
+    <label for="nombre" class="form-label"> Nombre </label> <br>
+    <input type="text" class="form-input" name="nombre" id="nombre" placeholder="Escriba su nombre">
     <br>
-    </div>
+    
 
-    <div>
-    <input type="radio" name="tipo" id="tipo" value="1" > Saludo
-    <input type="radio" name="tipo" id="tipo" value="0" > Sugerencia 
+    
+    <label for="dir" class="form-label"> Direccion </label><br>
+    <input class="form-input" name="dir" id="dir" placeholder="Escriba su direccion"> 
     <br> 
-    </div> 
+    
 
-    <div>
-    <label for="mensaje"> Mensaje </label> <br>
-    <input type="text" name="mensaje" id="mensaje" autofocus >
-    <br>    
-    </div>
+    
+    <label for="correo" class="form-label"> Correo Electrónico </label> <br>
+    <input class="form-input" name="correo" id="correo" placeholder="Ingrese su correo"/>
+    <br>
+    
+    <label for="mensaje" class="form-label"> Mensaje </label><br>
+    <input class="form-input" type="text" name="mensaje" id="mensaje" placeholder="Aqui escriba su mensaje"/>
+    <br>
+   
+    <input class="btn-submit" type="submit" value="Enviar Consulta/Comentario" />
+    
+    </form>
 
-    <div>
-    <input type="submit" id="boton" name="boton" value="Enviar">
-    </div>
+</div>
 
-     </form>
+<div class="for">
+
     <ul id="listaError" >
     </ul>
-    <div id="demo">
 
-    </div>
+
+
+    <div id="demo">
+    
+    
 
 <script>
 function ver(e){
-    errores.push(e);
+    console.log(e);
 }
 function enviar(e){
     if(validar()){
     let nombre = document.getElementById("nombre");
-    let saludo = document.getElementById("");
-    let sugerencia = document.form.sugerencia;
+    let dir = document.getElementById("dir");
+    let correo = document.form.correo;
     let mensaje = document.getElementById("mensaje");
     let errores = [];
     let inputs = document.querySelectorAll("input");
     let p = document.createElement("p");
-    // p.innerHTML = `${nombre.value } ` ;
-    // p.innerHTML += tipo[0].checked? "dejo un saludo! " : "sugiere: ";
-    // p.innerHTML += `${mensaje.value}`;
+    p.innerHTML = `${nombre.value }, de la localidad y/o cuidad de "${dir.value}", dejo un mensaje adjuntado al siguiente correo (${correo.value}).`;
+    p.innerHTML += ` `;
+    p.innerHTML += ` Pronto responderemos tu consulta o comentario, hasta pronto y gracias por tu opinion!.`
     document.getElementById("demo").appendChild(p);
-
-    switch(tipo[0]){
-        case 1:
-            if(mensaje != ""){
-                p.innerHTML += `${nombre} deja un saludo: ${mensaje}`;
-            }else{
-                p.innerHTML += `${nombre} deja un saludo!`;
-            }
-            break;
-        case 0:
-            p.innerHTML += `${nombre} sugiere: ${mensaje}`;
-            break;
-    }
+    form.reset();
     }
     return false;
     }
@@ -89,47 +91,50 @@ function enviar(e){
 
 
 function validar(){
+    
     let nombre = document.getElementById("nombre");
-    let saludo = document.getElementById("")
-    let sugerencia = document.form.sugerencia;
+    let dir = document.getElementById("dir");
+    let correo = document.form.correo;
     let mensaje = document.getElementById("mensaje");
     let errores = [];
-    let inputs = document.querySelectorAll("input,div");
-
+    let inputs = document.querySelectorAll("input");
     
+
     for(i = 0; i < inputs.length; i++){
         inputs[i].style.border = "revert";
     }
-    
 
+    let er = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
+    
+    if(correo.value.trim() == ''){
+        errores.push("EL campo correo, no puede estar vacio");
+        correo.style.border = "1px solid red";
+    }else if(!er.test(correo.value)){
+        errores.push("Deber ser un email valido");
+        correo.style.border = "1px solid red";
+    }
+
+    
     if(nombre.value.trim() == ''){
-        errores.push("Nombre no puede estar vacio");
+        errores.push("El campo nombre, no puede estar vacio");
         nombre.style.border = "1px solid red";
-    }else if(nombre.value.length > 30){
-        errores.push("Nombre no puede exceder los 30 caracteres")
+    }else if(nombre.value.length >= 200){
+        errores.push("Nombre no puede exceder los 200 caracteres");
         nombre.style.border = "1px solid red";
     }
     
-    if(mensaje.value == ''){
-        errores.push("Mensaje no puede estar vacio");
+    if(dir.value.trim() == ''){
+        errores.push("El campo direccion, no puede estar vacia");
+        dir.style.border = "1px solid red";
+    }
+    
+    if(mensaje.value.trim() == ''){
+        errores.push("El campo mensaje, no puede estar vacio");
         mensaje.style.border = "1px solid red";
-    }else if(mensaje.length > 200){
-        errores.push("El mensaje no puede exceder los 200 caracteres");
+    }else if(mensaje.length >= 1000){
+        errores.push("El mensaje no puede exceder los 1000 caracteres");
         mensaje.style.border = "1px solid red";
     }
-    if(tipo.length == 1){
-
-    }
-
-   if(form.tipo[0].checked == true || form.tipo[1].checked == true){
-
-   }else{
-    errores.push("Debe selecionar alguna opcion");
-    tipo[0].parentNode.style.border= "1px solid red";
-   }
-   if(form.tipo[0].value == 2 && mensaje == "" ){
-       errores.push("Debe escribir la sugerencia en el mensaje");
-   }
 
    let listaError_elem = document.querySelector("#listaError");
    listaError_elem.innerHTML = ""; 
@@ -145,6 +150,11 @@ function validar(){
 
 
 </script>
+
+</div>
+
+<br>
+</div>
 
 </body>
 </html>

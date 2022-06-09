@@ -216,4 +216,132 @@ video{
     text-align: center;
 }
 
+.tabla img{
+    width: 90px;
+    height: 70px;
+}
 
+#img2, #img3{
+    width: 90px;
+    height: 80px;
+}
+
+.contenedor .form .form-header .form-title{
+     font-weight: normal;
+     color: #ff851b;
+     text-align: center;
+     padding: 14px 0;
+     margin-top: 20px;
+}
+
+.contenedor .form .form-header .form-title span{
+    color : #fff;
+}
+
+.contenedor .form{
+    background: rgba(0, 0, 0, .6);
+    width: 90%;
+    max-width: 650px;
+    margin: auto;
+    padding: 5px 35px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 3px;
+}
+
+.contenedor .form .form-label{
+    display: block;
+    color: #ff851b;
+    font-size: 16px;
+    position: relative;
+    font-weight: bold;
+}
+
+.contenedor .form .form-input{
+    background: rgba(0, 0, 0, .7);
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ff851b;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.contenedor .form .btn-submit{
+    width: 100%;
+    outline: none;
+    background: #ff851b;
+    font-size: 16px;
+    border: none;
+    color: #fff;
+    padding: 15px 0;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.contenedor .form .btn-submit:hover{
+    background: #F29718;
+}
+
+.for li:hover{
+    margin-top: 30px;
+    cursor: auto;
+    background-color: red;
+}
+
+.for p{
+    font-size: 12px;
+    margin-top: 80px;
+    margin: 15px;
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+    color: #24252A;
+    background: #fff;
+    font-weight: bold;
+}
+
+.ram h1{
+    margin-top: 20px;
+    text-decoration: none;
+    background: #008849;
+    text-align: center;
+}
+
+.ram img{
+    height: 300px;
+    width: 630px;
+    margin-top: 20px;   
+    margin-left: 350px;
+    margin-top: 20px;   
+}
+
+.ram p{
+    font-size: 18px;
+    margin-top: 30px;
+    font-weight:bold;
+    line-height: 20px;
+    color: black;
+    margin: 10px;
+}
+
+.ram h2{
+    background-color: #ff851b;
+    padding: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.ram li:hover{
+    background-color: #008849;
+    transition: all 1s;
+    cursor: auto;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: justify all;
+}
